@@ -42,7 +42,7 @@ class App extends Component {
     };
 
     this.checkForDuplicate(contact.name)
-      ? Notify.info(`${contact.name} is already in contacts`)
+      ? Notify.warning(`${contact.name} is already in contacts`)
       : this.setState(prevState => ({
           contacts: [...prevState.contacts, contact],
         }));
